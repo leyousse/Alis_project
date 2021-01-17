@@ -9,8 +9,7 @@ max_length = 32  # Maximum length of input sentence to the model.
 batch_size = 32
 epochs = 2
 # Labels in our dataset.
-labels = ["contradiction", "entailment", "neutral"]  # Maximum length of input sentence to the model.
-
+labels = ["contradiction", "entailment", "neutral"] 
 fichier = pd.read_csv("ml/dataset_questions_reponses.txt", sep=";")
 
 
@@ -154,31 +153,53 @@ def check_similarity(sentence1, sentence2,model_question_answer):
 
 
 
-#Modele de qui va terminer les fins de phrases
-pipeline_gen = pipeline('text-generation',model='./ml/model-fine-tune', tokenizer='camembert-base')
-#Modele qui va repondre aux questions par rapport au dataset de questions réponses que l'on a construit
-model_question_answer = create_model()
-path = "ml/model/weights"
-model_question_answer.load_weights(path)
-#print(f"Strategy: {strategy}")
-#model.summary()
+#----------Load model to finish sentences gpt-2 french fine tune----------
+french_generator = pipeline('text-generation',model='ml/modeles/gpt2-fine-tune', tokenizer='camembert-base')
+
+#----------Load model to finish sentences gpt2-english not fine tune----------
+english_generator = pipeline('text-generation', model='gpt2')
+
+#----------Load model for questions answer----------
+#model_question_answer = create_model()
+#path = "ml/modeles/bert-question-reponses/weights"
+#model_question_answer.load_weights(path)
 
 
 
-def generate_sentences(debut_phrase,length,temperature):
-    response = pipeline_gen(debut_phrase,num_return_sequences=1,max_length=length,temperature=temperature)
-    return response
+def generate_sentences_french_gpt2(debut_phrase,num_return_sequences=1,length=20,temperature=1):
+    response = french_generator(debut_phrase,num_return_sequences=1,max_length=length)
+    liste = []
+    for res in response:
+        liste.append(res["generated_text"])
+    return liste
+
+def translate(texte,src,dest):
+  translator = Translator()
+  translated = translator.translate(texte, src=src, dest=dest).text
+  return translated
+
+def generate_sentences_english_gpt2(debut_phrase,num_return_sequences=1,length=20,temperature=1):
+    debut_phrase = translate(debut_phrase,'fr','en')
+    print(debut_phrase)
+
+    response_debut_phrase = english_generator(debut_phrase,num_return_sequences=num_return_sequences,max_length=length)
+    liste = []
+    for res in response_debut_phrase:
+        temp = translate(res["generated_text"],'en','fr')
+        liste.append(temp)
+    return liste
+
+
 
 def question_answer(text):
     translator = Translator()
     translated = translator.translate(text, src='fr', dest='en').text
     liste_similarity=[]
-    print("translated",translated)
+    #print("translated",translated)
     for i in range(len(fichier)):
         pred,proba = check_similarity(fichier.iloc[i][0],translated,model_question_answer)
-        print("pred :",pred,"proba",proba)
+        #print("pred :",pred,"proba",proba)
         if pred == "entailment":
             liste_similarity.append(fichier.iloc[i][1])
-            print("yes")
     return liste_similarity
 

@@ -1,1 +1,5 @@
-backend/ml
+*.pyc
+*.bin
+*.index
+*.data-00000-of-00001
+backend/ml/modeles/bert-question-reponses/checkpoint

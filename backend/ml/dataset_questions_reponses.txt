@@ -1,0 +1,13 @@
+questions;reponses
+Are you hungry ? ; Oui j'ai très faim/Non je n'ai pas faim
+Do you want to see your family ? ; Oui j'aimerai bien les voir/Non je n'ai pas vraiment le temps/Non je n'ai pas très envie
+Do you want to do an activity ? ; Oui j'aimerai voir un film/Oui j'aimerai lire un livre/Non je souhaite me reposer 
+How are you feeling today ? ; Je me sens très bien/Je ne me sens pas très bien/Je ne vais pas bien du tout
+Do you want to see a doctor ? ; Oui, je veux voir un docteur/Non, je ne veux pas voir un docteur
+When are you available ? ; Lundi/Mardi/Mercredi/Jeudi/Vendredi/Samedi/Dimanche/Je ne sais pas
+When do you want to do this activity ? ; Maintenant/Plus tard/Demain/Cet après-midi/Ce matin/Ce soir/Un autre jour/Je ne sais pas
+Do you need something ? ; Oui, j'ai faim/Oui, j'aimerais aller aux toilettes/Oui, j'ai besoin de quelqu'un/J'ai froid/J'ai chaud/Non, Merci 
+What do you want to do today ? ; J'aimerais me promener/J'aimerais voir un film/J'aimerais lire un livre/J'aimerais faire un jeu/Je ne sais pas/Je ne veux rien faire merci
+What do you want to eat ? ; Du poisson/De la viande/Des légumes/Des pâtes/Du riz/Du fromage/Du pain/Un yaourt/Des fruits/Des sucreries
+What do you want to drink ? ; De l'eau plate/De l'eau pétillante/Du soda/Du jus de fruit/Du lait/Du café/Du thé/Un chocolat chaud
+

@@ -31,41 +31,32 @@ def close_connection(cur,conn):
     conn.close()
     print("MySQL connection is closed")
 
-def create_database_interlocuteur(cur,conn):
-    cur.execute("""CREATE TABLE IF NOT EXISTS data_interlocuteur
+def create_database(cur,conn,name_db):
+    cur.execute(f"""CREATE TABLE IF NOT EXISTS {name_db} 
                 (
                     id int NOT NULL AUTO_INCREMENT,
                     phrase varchar(255),
                     interlocuteur varchar(100),
+                    reponse varchar(255),
                     PRIMARY KEY (id)
                 );""")
     conn.commit()
 
-def create_database_perso(cur,conn):
-    cur.execute("""CREATE TABLE IF NOT EXISTS data_perso 
-                (
-                    id int NOT NULL AUTO_INCREMENT,
-                    phrase varchar(255),
-                    interlocuteur varchar(100),
-                    compteur int,
-                    PRIMARY KEY (id)
-                );""")
-    conn.commit()
-
-def insert(cur,conn,name_table,phrase,interlocuteur):
+def insert(cur,conn,name_table,phrase,interlocuteur,reponse):
     cur.execute(f"""
-                INSERT INTO {name_table}(phrase,interlocuteur) VALUES ('{phrase}','{interlocuteur}')
+                INSERT INTO {name_table}(phrase,interlocuteur,reponse) VALUES ('{phrase}','{interlocuteur}','{reponse}')
                 """)
     conn.commit()
 
-def parse_json(request):
-    interlocuteur = request['interlocuteur']
-    phrase = request['phrase']
-    print(f"L'interlocuteur est {interlocuteur}, il a dit {phrase}")
-    
-    conn,cur = connect_to_databse()
-    create_database_interlocuteur(cur,conn)
-    insert(cur,conn,'data_perso',phrase,interlocuteur)
-    close_connection(cur,conn)
-
-## sur les top phrases le mec potentiellement il va pas dire 2 fois exactement la meme phrase
+def insert_phrase(phrase,reponse,interlocuteur):
+    status = 0
+    try :
+        NAME_DB = "mes_conversations"
+        conn,cur = connect_to_databse()
+        create_database(cur,conn,NAME_DB)
+        insert(cur,conn,NAME_DB,phrase,interlocuteur,reponse)
+        close_connection(cur,conn)
+        status = 1
+    except Error as e:
+        print("Il y a eu un problème",e)
+    return status
