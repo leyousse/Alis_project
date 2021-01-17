@@ -1,0 +1,30 @@
+{   "acces":
+        {"trottin":{
+            "speech_key":"1c514fb1fea2465a882f0fae12242cc0",
+            "service_region":"francecentral"}, 
+        "personnel":    {
+            "speech_key":"9c1d17b3887543978fd5ed4dda77dda0",
+            "service_region":"westeurope"}
+        },
+    "api":
+        {
+            "langue":"Fr",
+            "city":"Paris",
+            "time":
+                {
+                "key":"1V41S37BHZ1Z"
+                },
+            "weather":
+                {
+                "key":"4c218dc49db1895d6922053cd0aa29c5"
+                }
+        },
+    "database":
+        {
+            "host":"localhost",
+            "user":"root",
+            "password":"Football26",
+            "db":"historique"
+        }
+}
+
