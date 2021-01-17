@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Demoo.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.CognitiveServices.Speech": "1.14.0",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "Demoo.Core.dll": {}
+        }
+      },
+      "Microsoft.CognitiveServices.Speech/1.14.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.CognitiveServices.Speech.csharp.dll": {
+            "assemblyVersion": "1.14.0.28",
+            "fileVersion": "1.14.0.28"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Demoo.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CognitiveServices.Speech/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P7V9cKk7mlm7Mt2LCHoTD1K3l7z8v0aizY/cEjSNHaeCu9eSelC7giha3c7+lk/QlU4fydreEVPS5uA4UC4g+g==",
+      "path": "microsoft.cognitiveservices.speech/1.14.0",
+      "hashPath": "microsoft.cognitiveservices.speech.1.14.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aTRmXwR5xYu+mWxE8r8W1DWnL02SeV8LwdQMsLwTWP8OZgrCCyTqvOAe5hRb1VNQYXjln7qr0PKpSyO/pcc19Q==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    }
+  }
+}
