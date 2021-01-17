@@ -160,9 +160,9 @@ french_generator = pipeline('text-generation',model='ml/modeles/gpt2-fine-tune',
 english_generator = pipeline('text-generation', model='gpt2')
 
 #----------Load model for questions answer----------
-#model_question_answer = create_model()
-#path = "ml/modeles/bert-question-reponses/weights"
-#model_question_answer.load_weights(path)
+model_question_answer = create_model()
+path = "ml/modeles/bert-question-reponses/weights"
+model_question_answer.load_weights(path)
 
 
 

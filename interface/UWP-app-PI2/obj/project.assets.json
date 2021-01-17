@@ -11003,11 +11003,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\UWP-app-PI2\\Demoo.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\UWP-app-PI2\\Demoo.csproj",
       "projectName": "Demoo",
-      "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\UWP-app-PI2\\Demoo.csproj",
+      "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\UWP-app-PI2\\Demoo.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\UWP-app-PI2\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\UWP-app-PI2\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -11028,8 +11028,8 @@
       "frameworks": {
         "uap10.0.18362": {
           "projectReferences": {
-            "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\Demoo.Core\\Demoo.Core.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\Demoo.Core\\Demoo.Core.csproj"
+            "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj"
             }
           }
         }

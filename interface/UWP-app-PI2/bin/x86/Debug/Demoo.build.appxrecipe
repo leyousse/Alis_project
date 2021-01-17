@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>243E158E-1F25-44EF-90FC-68A410B06C6D</PackageIdentityName>
     <PackageIdentityPublisher>CN=leays</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Demoo.exe">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Demoo.exe">
       <PackagePath>entrypoint\Demoo.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\caliburn.micro\3.2.0\lib\uap10.0\Caliburn.Micro.Platform.Core.dll">
@@ -94,7 +94,7 @@
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\win2d.uwp\1.25.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\Demoo.Core\bin\Debug\netstandard2.0\Demoo.Core.dll">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\bin\Debug\netstandard2.0\Demoo.Core.dll">
       <PackagePath>Demoo.Core.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\win2d.uwp\1.25.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
@@ -109,151 +109,151 @@
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\microsoft.toolkit.uwp.ui.controls\6.1.1\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\PlaceholderImage.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\PlaceholderImage.png">
       <PackagePath>Assets\PlaceholderImage.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto1.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto1.png">
       <PackagePath>Assets\SampleData\SamplePhoto1.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto10.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto10.png">
       <PackagePath>Assets\SampleData\SamplePhoto10.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto2.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto2.png">
       <PackagePath>Assets\SampleData\SamplePhoto2.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto3.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto3.png">
       <PackagePath>Assets\SampleData\SamplePhoto3.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto4.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto4.png">
       <PackagePath>Assets\SampleData\SamplePhoto4.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto5.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto5.png">
       <PackagePath>Assets\SampleData\SamplePhoto5.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto6.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto6.png">
       <PackagePath>Assets\SampleData\SamplePhoto6.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto7.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto7.png">
       <PackagePath>Assets\SampleData\SamplePhoto7.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto8.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto8.png">
       <PackagePath>Assets\SampleData\SamplePhoto8.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto9.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SampleData\SamplePhoto9.png">
       <PackagePath>Assets\SampleData\SamplePhoto9.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Demoo.xr.xml">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Demoo.xr.xml">
       <PackagePath>Demoo.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Controls\CameraControl.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Controls\CameraControl.xbf">
       <PackagePath>Controls\CameraControl.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\CommandBar.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\CommandBar.xbf">
       <PackagePath>Styles\CommandBar.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\Image.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\Image.xbf">
       <PackagePath>Styles\Image.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\Page.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\Page.xbf">
       <PackagePath>Styles\Page.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\_Colors.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\_Colors.xbf">
       <PackagePath>Styles\_Colors.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\_FontSizes.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\_FontSizes.xbf">
       <PackagePath>Styles\_FontSizes.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\_Thickness.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\_Thickness.xbf">
       <PackagePath>Styles\_Thickness.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Styles\TextBlock.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\TextBlock.xbf">
       <PackagePath>Styles\TextBlock.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\BlankPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\BlankPage.xbf">
       <PackagePath>Views\BlankPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\CameraPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\CameraPage.xbf">
       <PackagePath>Views\CameraPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\ContentGridDetailPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ContentGridDetailPage.xbf">
       <PackagePath>Views\ContentGridDetailPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\ContentGridPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ContentGridPage.xbf">
       <PackagePath>Views\ContentGridPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\ImageGalleryDetailPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ImageGalleryDetailPage.xbf">
       <PackagePath>Views\ImageGalleryDetailPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\ImageGalleryPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ImageGalleryPage.xbf">
       <PackagePath>Views\ImageGalleryPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\InkSmartCanvasPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\InkSmartCanvasPage.xbf">
       <PackagePath>Views\InkSmartCanvasPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailDetail\DetailsView.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailDetail\DetailsView.xbf">
       <PackagePath>Views\MasterDetailDetail\DetailsView.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailDetail\MasterView.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailDetail\MasterView.xbf">
       <PackagePath>Views\MasterDetailDetail\MasterView.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailPage.xbf">
       <PackagePath>Views\MasterDetailPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\MediaPlayerPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MediaPlayerPage.xbf">
       <PackagePath>Views\MediaPlayerPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\SchemeActivationSamplePage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\SchemeActivationSamplePage.xbf">
       <PackagePath>Views\SchemeActivationSamplePage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\SettingsPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\SettingsPage.xbf">
       <PackagePath>Views\SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\ShellPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ShellPage.xbf">
       <PackagePath>Views\ShellPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\WebViewPage.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\WebViewPage.xbf">
       <PackagePath>Views\WebViewPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Views\WhatsNewDialog.xbf">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\WhatsNewDialog.xbf">
       <PackagePath>Views\WhatsNewDialog.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
@@ -265,10 +265,10 @@
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\microsoft.ui.xaml\2.5.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\UWP-app-PI2\bin\x86\Debug\Core\Demoo.exe">
+    <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Core\Demoo.exe">
       <PackagePath>Demoo.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

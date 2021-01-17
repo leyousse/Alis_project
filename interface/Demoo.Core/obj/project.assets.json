@@ -522,11 +522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\Demoo.Core\\Demoo.Core.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
       "projectName": "Demoo.Core",
-      "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\Demoo.Core\\Demoo.Core.csproj",
+      "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\Demoo.Core\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

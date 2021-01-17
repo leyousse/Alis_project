@@ -54,7 +54,7 @@ namespace Demoo.Views
 
         string url_questions_reponses = "http://127.0.0.1:5000/questions_reponses";
         string url_insert_to_databases = "http://127.0.0.1:5000/insert_to_dabatase";
-        string url_fin_phrases = "http://127.0.0.1:5000/debut_phrase_response2";
+        string url_fin_phrases = "http://127.0.0.1:5000/generate_sentences_english_gpt2";
 
 
         public MainPage()

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DL3QJgIuldEZqgYcqisJl+QIbj7o99yO6/AgE61/o+SzH/NUSPa+1smvIs8tCroiiaHySDECXv6ScHiq5zZTvw==",
+  "dgSpecHash": "j1cnrhvi2gsgdpapruvUTiAiz7nwW36x/fiTDQGuaQ6mtyohdc8sxb57T+EVwzcHd2PvFo3JLdKkNxGEkKCqew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\Demoo.Core\\Demoo.Core.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.14.0\\microsoft.cognitiveservices.speech.1.14.0.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

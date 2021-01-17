@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pfh8klE+yqoP9NfFPHWYa3RLZY9q/oFuhzVZk+dfV2G/baUA9wP////tdy9sxEDZMoBbqRB3KFciPGxCZtb6eg==",
+  "dgSpecHash": "lqvB/a1BU0jKEj4xZWiG8RAq8nuOveeLdxetSDdx2U3KtI7Ik/PtwrFr4SXNLW21TU+EH8JCEM2AGfOr8oTxsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\PI\\GIT\\alis\\interface\\UWP-app-PI2\\Demoo.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\UWP-app-PI2\\Demoo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\caliburn.micro\\3.2.0\\caliburn.micro.3.2.0.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\caliburn.micro.core\\3.2.0\\caliburn.micro.core.3.2.0.nupkg.sha512",

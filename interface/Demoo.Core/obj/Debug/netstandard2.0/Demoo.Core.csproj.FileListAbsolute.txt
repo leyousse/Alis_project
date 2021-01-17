@@ -25,3 +25,12 @@ C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\Demoo.Core\obj\Deb
 C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.csproj.CoreCompileInputs.cache
 C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.dll
 C:\Users\nicol\Documents\ESILV\ESILV-A5\PI\GIT\alis\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.pdb
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\bin\Debug\netstandard2.0\Demoo.Core.deps.json
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\bin\Debug\netstandard2.0\Demoo.Core.dll
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\bin\Debug\netstandard2.0\Demoo.Core.pdb
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.csprojAssemblyReference.cache
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.AssemblyInfoInputs.cache
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.AssemblyInfo.cs
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.dll
+C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\Demoo.Core\obj\Debug\netstandard2.0\Demoo.Core.pdb

@@ -16,7 +16,7 @@ def finish_sentences_english_gpt2():
     debut_phrase = req_data["phrase"]
     print("debut_phrase",debut_phrase,type(debut_phrase))
     
-    liste_reponse = generate_sentences_english_gpt2(debut_phrase,num_return_sequences=1)
+    liste_reponse = generate_sentences_english_gpt2(debut_phrase,num_return_sequences=3)
     json_string = json.dumps(liste_reponse)
     print(json_string)
 
