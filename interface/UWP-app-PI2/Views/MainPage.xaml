@@ -14,23 +14,27 @@
             <TextBlock Text="{Binding DisplayName}"/>
         </DataTemplate>
     </Page.Resources>
-    <Grid Margin="0,0,284,0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="86*"/>
-            <RowDefinition Height="39*"/>
-        </Grid.RowDefinitions>
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="TitleTextBlock"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="0,0,0,0"  >
+            <TextBlock x:Name="TitleTextBlock"
                    Text="LIS Interface"
                    FontFamily="Calibri"
                    FontSize="40"
                    Foreground="DarkOrange"
-                   TextWrapping="Wrap" Margin="0,0,-32,0" Grid.RowSpan="2" SelectionChanged="TitleTextBlock_SelectionChanged"
+                   TextWrapping="Wrap" SelectionChanged="TitleTextBlock_SelectionChanged"
                   />
 
-        <ComboBox x:Name="VoiceComboBox"
+            <ComboBox x:Name="VoiceComboBox"
                   ItemsSource="{x:Bind speech:SpeechSynthesizer.AllVoices,Mode=OneWay}"
                   ItemTemplate="{StaticResource VoiceDataTemplate}"
                   SelectedItem="{x:Bind SelectedVoice,Mode=TwoWay}"
@@ -38,48 +42,82 @@
                   FontFamily="Calibri"
                   FontSize="16"
                   Width="200"
-                  Margin="50,319,0,0" Height="32"
+                  Height="32"
+                  Margin="0,10,0,0"
                  />
+        </StackPanel>
 
-        <Button Name="ConvertButton"
-                Content="Convert"
-                Width="100"
-              
-                Click="ConvertButton_Click" Margin="50,378,0,0" VerticalAlignment="Top" Height="32"/>
-
-        <Button Name="SaveButton"
-                Content="Save as .wav"
-                Width="100"
-          
-                Click="SaveButton_Click" Margin="1034,216,0,0" VerticalAlignment="Top" Height="32" />
-
-
-
-        <ListView ItemsSource="{x:Bind FinDePhrase}" IsItemClickEnabled="True" SelectionMode="Single" Margin="118,451,1048,37" SelectionChanged="FinDePhrases_SelectionChanged"/>
-
-        <ListView ItemsSource="{x:Bind QuestionsReponses}" IsItemClickEnabled="True" SelectionMode="Single" Margin="700,397,466,91" SelectionChanged="QuestionsReponses_SelectionChanged"/>
-
-
-        <Button Name="ButtonSpeechtotext"
+        <StackPanel Grid.Column="2" Margin="1170,0,0,0">
+            <Button Name="ButtonSpeechtotext"
                 Content="SpeechToText"
-                Width="122"
-               
-                Click="SpeechRecognitionFromMicrophone_ButtonClicked" RenderTransformOrigin="0.5,0.5" Margin="1012,61,0,0" VerticalAlignment="Top" Height="52"/>
+                Width="122" 
+                Click="SpeechRecognitionFromMicrophone_ButtonClicked"
+                RenderTransformOrigin="0.5,0.5"
+                Height="52"
+                />
 
-        <Button Name="ButtonEnroll"
+            <Button Name="ButtonEnroll"
                 Content="NewSpeaker"
                 Padding="15"
                 Click="VoiceRecognition" RenderTransformOrigin="0.5,0.5"
-                Width="122" Margin="1012,138,0,0" VerticalAlignment="Top" Height="52"
+                Width="122" Height="52"
+                Margin="0,10,0,0"
                />
+            
+        </StackPanel>
+        <Button Margin="1300,30,0,0"
+                Name="SaveButton"
+                Content="Save as .wav"
+                Width="100"
+                Click="SaveButton_Click" Height="32"/>
 
-        <TextBox x:Name="TextInputTextBox" 
+
+        <StackPanel Grid.Row ="2"  Margin="0,0">
+            <TextBox x:Name="TextInputTextBox" 
                  Text="{x:Bind TextInput,Mode=TwoWay}"
                  PlaceholderText="Enter Text"
-                 AcceptsReturn="True" Margin="116,0,465,188" Grid.Row="1"  />
+                 AcceptsReturn="True"
+                 Width="1000"
+                 Height="100"
+                 Margin="0,0,0,0"/>
+            
+            <Button Name="ConvertButton"
+                Content="Convert"
+                Width="100"
+                Click="ConvertButton_Click" Height="32"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,0">
+            <Grid Margin="0,40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+           
+            <ListView ItemsSource="{x:Bind FinDePhrase}" IsItemClickEnabled="True" SelectionMode="Single"
+                      SelectionChanged="FinDePhrases_SelectionChanged"
+                      Width="700"
+                      Grid.Column="0"
+                      />
+
+            <ListView ItemsSource="{x:Bind QuestionsReponses}" IsItemClickEnabled="True" SelectionMode="Single"
+                   SelectionChanged="QuestionsReponses_SelectionChanged"
+                  Width="600"
+                  Grid.Column="1"
+                 />
+            </Grid>
+        </StackPanel>
 
 
-        <StackPanel x:Name="StatusPanel" Orientation="Vertical" Margin="50,168,50,20" Grid.Row="1">
+
+
+
+
+
+        <StackPanel x:Name="StatusPanel"  Grid.Row="3" Grid.Column="1">
             <Border x:Name="StatusBorder" >
                 <ScrollViewer VerticalScrollMode="Auto"  VerticalScrollBarVisibility="Auto" MaxHeight="200">
                     <!-- Use LiveSetting to enable screen readers to announce the status update. -->

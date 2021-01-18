@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-17T22:23:19.699</Modified>
+      <Modified>2021-01-18T18:45:59.625</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Demoo.exe">
       <PackagePath>entrypoint\Demoo.exe</PackagePath>
-      <Modified>2021-01-17T22:23:17.291</Modified>
+      <Modified>2021-01-18T18:45:57.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\caliburn.micro\3.2.0\lib\uap10.0\Caliburn.Micro.Platform.Core.dll">
       <PackagePath>Caliburn.Micro.Platform.Core.dll</PackagePath>
@@ -234,111 +234,111 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Demoo.xr.xml">
       <PackagePath>Demoo.xr.xml</PackagePath>
-      <Modified>2021-01-17T22:15:48.358</Modified>
+      <Modified>2021-01-18T18:41:47.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Controls\CameraControl.xbf">
       <PackagePath>Controls\CameraControl.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\CommandBar.xbf">
       <PackagePath>Styles\CommandBar.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.990</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\Image.xbf">
       <PackagePath>Styles\Image.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.990</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\Page.xbf">
       <PackagePath>Styles\Page.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.990</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\_Colors.xbf">
       <PackagePath>Styles\_Colors.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\_FontSizes.xbf">
       <PackagePath>Styles\_FontSizes.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\_Thickness.xbf">
       <PackagePath>Styles\_Thickness.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Styles\TextBlock.xbf">
       <PackagePath>Styles\TextBlock.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\BlankPage.xbf">
       <PackagePath>Views\BlankPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.991</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\CameraPage.xbf">
       <PackagePath>Views\CameraPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ContentGridDetailPage.xbf">
       <PackagePath>Views\ContentGridDetailPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.943</Modified>
+      <Modified>2021-01-18T18:45:57.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ContentGridPage.xbf">
       <PackagePath>Views\ContentGridPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ImageGalleryDetailPage.xbf">
       <PackagePath>Views\ImageGalleryDetailPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ImageGalleryPage.xbf">
       <PackagePath>Views\ImageGalleryPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\InkSmartCanvasPage.xbf">
       <PackagePath>Views\InkSmartCanvasPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.968</Modified>
+      <Modified>2021-01-18T18:45:57.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailDetail\DetailsView.xbf">
       <PackagePath>Views\MasterDetailDetail\DetailsView.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.973</Modified>
+      <Modified>2021-01-18T18:45:57.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailDetail\MasterView.xbf">
       <PackagePath>Views\MasterDetailDetail\MasterView.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MasterDetailPage.xbf">
       <PackagePath>Views\MasterDetailPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.992</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\MediaPlayerPage.xbf">
       <PackagePath>Views\MediaPlayerPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.993</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\SchemeActivationSamplePage.xbf">
       <PackagePath>Views\SchemeActivationSamplePage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.993</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\SettingsPage.xbf">
       <PackagePath>Views\SettingsPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.993</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\ShellPage.xbf">
       <PackagePath>Views\ShellPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.993</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\WebViewPage.xbf">
       <PackagePath>Views\WebViewPage.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.989</Modified>
+      <Modified>2021-01-18T18:45:57.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Views\WhatsNewDialog.xbf">
       <PackagePath>Views\WhatsNewDialog.xbf</PackagePath>
-      <Modified>2021-01-17T22:23:16.993</Modified>
+      <Modified>2021-01-18T18:45:57.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -358,7 +358,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\bin\x86\Debug\Core\Demoo.exe">
       <PackagePath>Demoo.exe</PackagePath>
-      <Modified>2021-01-17T22:23:19.695</Modified>
+      <Modified>2021-01-18T18:45:59.619</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

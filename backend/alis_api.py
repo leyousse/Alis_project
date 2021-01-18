@@ -17,7 +17,7 @@ def finish_sentences_english_gpt2():
     print("debut_phrase",debut_phrase,type(debut_phrase))
     
     liste_reponse = generate_sentences_english_gpt2(debut_phrase,num_return_sequences=3)
-    json_string = json.dumps(liste_reponse)
+    json_string = json.dumps(liste_reponse,ensure_ascii=False)
     print(json_string)
 
     return json_string
@@ -30,7 +30,7 @@ def finish_sentences_french_gpt2():
     print("debut_phrase",debut_phrase,type(debut_phrase))
     
     liste_reponse = generate_sentences_french_gpt2(debut_phrase,num_return_sequences=1)
-    json_string = json.dumps(liste_reponse)
+    json_string = json.dumps(liste_reponse,ensure_ascii=False)
     print(json_string)
 
     return json_string
@@ -62,7 +62,7 @@ def question_reponses():
     print(liste_reponse)
     
     #liste_reponse = ["reponse1","reponse2"]
-    json_string = json.dumps(liste_reponse)
+    json_string = json.dumps(liste_reponse,ensure_ascii=False)
     print(json_string)
 
     return json_string
