@@ -2,8 +2,10 @@ from transformers import pipeline
 import tensorflow as tf
 import transformers
 import numpy as np
-from googletrans import Translator
+#from googletrans import Translator
 import pandas as pd 
+import re
+from google_trans_new import google_translator  
 
 max_length = 32  # Maximum length of input sentence to the model.
 batch_size = 32
@@ -151,6 +153,57 @@ def check_similarity(sentence1, sentence2,model_question_answer):
     pred = labels[idx]
     return pred, proba
 
+def question_answer(text):
+    translated = translate(text,src='fr', dest='en')
+    liste_similarity=[]
+    #print("translated",translated)
+    for i in range(len(fichier)):
+        if len(liste_similarity) <3:
+            pred,proba = check_similarity(fichier.iloc[i][0],translated,model_question_answer)
+            #print("pred :",pred,"proba",proba)
+            if pred == "entailment":
+                all_reponses = fichier.iloc[i][1]
+                temp_liste = all_reponses.split("/")
+                for temp in temp_liste:
+                    liste_similarity.append(temp)
+        else:
+            return liste_similarity
+
+    return liste_similarity
+
+
+
+
+
+def generate_sentences_french_gpt2(debut_phrase,num_return_sequences=1,length=20,temperature=1):
+    response = french_generator(debut_phrase,num_return_sequences=1,max_length=length)
+    liste = []
+    for res in response:
+        liste.append(res["generated_text"])
+    return liste
+
+def translate(texte,src="en",dest="fr"):
+    translator = google_translator()  
+    translate_text = translator.translate(texte,lang_tgt=dest)  
+    return translate_text
+
+def generate_sentences_english_gpt2(debut_phrase,num_return_sequences,length,top_p):
+    debut_phrase = translate(debut_phrase,'fr',dest = 'en')
+
+    response_debut_phrase = english_generator(debut_phrase,num_return_sequences=num_return_sequences,max_length=length,top_p=top_p)
+    liste = []
+    for res in response_debut_phrase:
+        print("res",res)
+        temp = translate(res["generated_text"],'en',dest = 'fr')
+        temp = truncate(temp)
+        liste.append(temp)
+    return liste
+
+def truncate(string):
+    strin_clean = re.sub('\.(.*)', '.', string)
+    strin_clean = re.sub('\?(.*)', '?', strin_clean)
+    strin_clean = re.sub('\!(.*)', '!', strin_clean)
+    return strin_clean
 
 
 #----------Load model to finish sentences gpt-2 french fine tune----------
@@ -163,43 +216,3 @@ english_generator = pipeline('text-generation', model='gpt2')
 model_question_answer = create_model()
 path = "ml/modeles/bert-question-reponses/weights"
 model_question_answer.load_weights(path)
-
-
-
-def generate_sentences_french_gpt2(debut_phrase,num_return_sequences=1,length=20,temperature=1):
-    response = french_generator(debut_phrase,num_return_sequences=1,max_length=length)
-    liste = []
-    for res in response:
-        liste.append(res["generated_text"])
-    return liste
-
-def translate(texte,src,dest):
-  translator = Translator()
-  translated = translator.translate(texte, src=src, dest=dest).text
-  return translated
-
-def generate_sentences_english_gpt2(debut_phrase,num_return_sequences=1,length=20,temperature=1):
-    debut_phrase = translate(debut_phrase,'fr','en')
-    print(debut_phrase)
-
-    response_debut_phrase = english_generator(debut_phrase,num_return_sequences=num_return_sequences,max_length=length)
-    liste = []
-    for res in response_debut_phrase:
-        temp = translate(res["generated_text"],'en','fr')
-        liste.append(temp)
-    return liste
-
-
-
-def question_answer(text):
-    translator = Translator()
-    translated = translator.translate(text, src='fr', dest='en').text
-    liste_similarity=[]
-    #print("translated",translated)
-    for i in range(len(fichier)):
-        pred,proba = check_similarity(fichier.iloc[i][0],translated,model_question_answer)
-        #print("pred :",pred,"proba",proba)
-        if pred == "entailment":
-            liste_similarity.append(fichier.iloc[i][1])
-    return liste_similarity
-

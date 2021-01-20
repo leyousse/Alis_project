@@ -16,8 +16,10 @@ def finish_sentences_english_gpt2():
     debut_phrase = req_data["phrase"]
     print("debut_phrase",debut_phrase,type(debut_phrase))
     
-    liste_reponse = generate_sentences_english_gpt2(debut_phrase,num_return_sequences=3)
-    json_string = json.dumps(liste_reponse,ensure_ascii=False)
+    liste_reponses = generate_sentences_english_gpt2(debut_phrase,num_return_sequences=4,length=40,top_p = 0.4)
+    
+    #liste_reponse =  generate_sentences_english_gpt2(debut_phrase,num_return_sequences=3)
+    json_string = json.dumps(liste_reponses,ensure_ascii=False)
     print(json_string)
 
     return json_string
@@ -64,7 +66,6 @@ def question_reponses():
     #liste_reponse = ["reponse1","reponse2"]
     json_string = json.dumps(liste_reponse,ensure_ascii=False)
     print(json_string)
-
     return json_string
 
 
