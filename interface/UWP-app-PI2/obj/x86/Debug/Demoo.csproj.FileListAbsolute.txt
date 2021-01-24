@@ -796,4 +796,3 @@ C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2
 C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637214462760000000.json
 C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
-C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637112570540000000.json

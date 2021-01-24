@@ -20,21 +20,21 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1.5*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0" Margin="0,0,0,0"  >
-            <TextBlock x:ConnectionId='15' x:Name="TitleTextBlock"
+            <TextBlock x:ConnectionId='16' x:Name="TitleTextBlock"
                    Text="LIS Interface"
                    FontFamily="Calibri"
                    FontSize="40"
                    Foreground="DarkOrange"
-                   TextWrapping="Wrap"                                                   
+                   TextWrapping="Wrap" 
                   />
 
-            <ComboBox x:ConnectionId='16' x:Name="VoiceComboBox"
+            <ComboBox x:ConnectionId='17' x:Name="VoiceComboBox"
                                                                                        
                   ItemTemplate="{StaticResource VoiceDataTemplate}"
                                                                    
@@ -48,7 +48,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" Margin="1170,0,0,0">
-            <Button x:ConnectionId='13' Name="ButtonSpeechtotext"
+            <Button x:ConnectionId='14' Name="ButtonSpeechtotext"
                 Content="SpeechToText"
                 Width="122" 
                                                                      
@@ -56,7 +56,7 @@
                 Height="52"
                 />
 
-            <Button x:ConnectionId='14' Name="ButtonEnroll"
+            <Button x:ConnectionId='15' Name="ButtonEnroll"
                 Content="NewSpeaker"
                 Padding="15"
                                          RenderTransformOrigin="0.5,0.5"
@@ -73,7 +73,7 @@
 
 
         <StackPanel Grid.Row ="2"  Margin="0,0">
-            <TextBox x:ConnectionId='11' x:Name="TextInputTextBox" 
+            <TextBox x:ConnectionId='12' x:Name="TextInputTextBox" 
                                                       
                  PlaceholderText="Enter Text"
                  AcceptsReturn="True"
@@ -81,7 +81,7 @@
                  Height="100"
                  Margin="0,0,0,0"/>
             
-            <Button x:ConnectionId='12' Name="ConvertButton"
+            <Button x:ConnectionId='13' Name="ConvertButton"
                 Content="Convert"
                 Width="100"
                                             Height="32"/>
@@ -97,13 +97,13 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
            
-            <ListView x:ConnectionId='9'                                    IsItemClickEnabled="True" SelectionMode="Single"
+            <ListView x:ConnectionId='10'                                    IsItemClickEnabled="True" SelectionMode="Single"
                                                                       
                       Width="700"
                       Grid.Column="0"
                       />
 
-            <ListView x:ConnectionId='10'                                          IsItemClickEnabled="True" SelectionMode="Single"
+            <ListView x:ConnectionId='11'                                          IsItemClickEnabled="True" SelectionMode="Single"
                                                                         
                   Width="600"
                   Grid.Column="1"
@@ -113,21 +113,34 @@
 
 
 
+        <MediaPlayerElement x:ConnectionId='5' x:Name="mPlayerElement"
+                            Height="100"
+                            AutoPlay="True"
+                            AreTransportControlsEnabled="True"
+                            Grid.Row="3" >
+            <MediaPlayerElement.TransportControls>
+                <MediaTransportControls IsStopButtonVisible="True"
+                                        IsStopEnabled="True"
+                                        IsSeekBarVisible="False"
+                                        IsSeekEnabled="False"
+                                        IsFullWindowButtonVisible="False"
+                                        IsZoomButtonVisible="False"/>
+            </MediaPlayerElement.TransportControls>
+        </MediaPlayerElement>
 
 
 
-
-        <StackPanel x:ConnectionId='5' x:Name="StatusPanel"  Grid.Row="3" Grid.Column="1">
-            <Border x:ConnectionId='6' x:Name="StatusBorder" >
+        <StackPanel x:ConnectionId='6' x:Name="StatusPanel"  Grid.Row="3" Grid.Column="1" Margin="0,-50">
+            <Border x:ConnectionId='7' x:Name="StatusBorder" >
                 <ScrollViewer VerticalScrollMode="Auto"  VerticalScrollBarVisibility="Auto" MaxHeight="200">
                     <!-- Use LiveSetting to enable screen readers to announce the status update. -->
-                    <TextBlock x:ConnectionId='8' x:Name="StatusBlock" FontWeight="Bold" AutomationProperties.LiveSetting="Assertive"
+                    <TextBlock x:ConnectionId='9' x:Name="StatusBlock" FontWeight="Bold" AutomationProperties.LiveSetting="Assertive"
                         MaxWidth="{Binding ElementName=Splitter, Path=ActualWidth}"  TextWrapping="Wrap"  />
                 </ScrollViewer>
             </Border>
-            <TextBlock x:ConnectionId='7' x:Name="StatusLabel"  TextWrapping="Wrap" Text="Status:" FontSize="20"/>
+            <TextBlock x:ConnectionId='8' x:Name="StatusLabel"  TextWrapping="Wrap" Text="Status:" FontSize="20"/>
         </StackPanel>
-
+        
 
     </Grid>
 </Page>

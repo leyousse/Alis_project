@@ -163,7 +163,6 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="TextAlignment" />
-      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
@@ -352,8 +351,25 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
+      <RootProperty Name="Height" />
+      <RootProperty Name="AutoPlay" />
+      <RootProperty Name="AreTransportControlsEnabled" />
+      <RootProperty Name="TransportControls" />
+      <RootProperty Name="PosterSource" />
+      <RootProperty Name="Source" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
+      <RootProperty Name="IsStopButtonVisible" />
+      <RootProperty Name="IsStopEnabled" />
+      <RootProperty Name="IsSeekBarVisible" />
+      <RootProperty Name="IsSeekEnabled" />
+      <RootProperty Name="IsFullWindowButtonVisible" />
+      <RootProperty Name="IsZoomButtonVisible" />
+      <RootProperty Name="IsCompact" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -405,16 +421,6 @@
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Demoo.Views.MasterDetailPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
-      <RootProperty Name="AreTransportControlsEnabled" />
-      <RootProperty Name="AutoPlay" />
-      <RootProperty Name="PosterSource" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="TransportControls" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
-      <RootProperty Name="IsCompact" />
-    </RootType>
     <RootType FullName="Demoo.Views.MediaPlayerPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsControl">
       <RootProperty Name="ItemsSource" />

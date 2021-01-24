@@ -20,8 +20,8 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1.5*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
@@ -31,7 +31,7 @@
                    FontFamily="Calibri"
                    FontSize="40"
                    Foreground="DarkOrange"
-                   TextWrapping="Wrap" SelectionChanged="TitleTextBlock_SelectionChanged"
+                   TextWrapping="Wrap" 
                   />
 
             <ComboBox x:Name="VoiceComboBox"
@@ -113,11 +113,24 @@
 
 
 
+        <MediaPlayerElement x:Name="mPlayerElement"
+                            Height="100"
+                            AutoPlay="True"
+                            AreTransportControlsEnabled="True"
+                            Grid.Row="3" >
+            <MediaPlayerElement.TransportControls>
+                <MediaTransportControls IsStopButtonVisible="True"
+                                        IsStopEnabled="True"
+                                        IsSeekBarVisible="False"
+                                        IsSeekEnabled="False"
+                                        IsFullWindowButtonVisible="False"
+                                        IsZoomButtonVisible="False"/>
+            </MediaPlayerElement.TransportControls>
+        </MediaPlayerElement>
 
 
 
-
-        <StackPanel x:Name="StatusPanel"  Grid.Row="3" Grid.Column="1">
+        <StackPanel x:Name="StatusPanel"  Grid.Row="3" Grid.Column="1" Margin="0,-50">
             <Border x:Name="StatusBorder" >
                 <ScrollViewer VerticalScrollMode="Auto"  VerticalScrollBarVisibility="Auto" MaxHeight="200">
                     <!-- Use LiveSetting to enable screen readers to announce the status update. -->
@@ -127,7 +140,7 @@
             </Border>
             <TextBlock x:Name="StatusLabel"  TextWrapping="Wrap" Text="Status:" FontSize="20"/>
         </StackPanel>
-
+        
 
     </Grid>
 </Page>

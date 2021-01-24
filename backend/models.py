@@ -12,7 +12,6 @@ batch_size = 32
 epochs = 2
 # Labels in our dataset.
 labels = ["contradiction", "entailment", "neutral"] 
-fichier = pd.read_csv("ml/dataset_questions_reponses.txt", sep=";")
 
 
 
@@ -51,17 +50,16 @@ def create_model():
     concat = tf.keras.layers.concatenate([avg_pool, max_pool])
     dropout = tf.keras.layers.Dropout(0.3)(concat)
     output = tf.keras.layers.Dense(3, activation="softmax")(dropout)
-    model = tf.keras.models.Model(
+    modele = tf.keras.models.Model(
         inputs=[input_ids, attention_masks, token_type_ids], outputs=output
     )
 
-    model.compile(
+    modele.compile(
         optimizer=tf.keras.optimizers.Adam(),
         loss="categorical_crossentropy",
         metrics=["acc"],
     )
-    return model
-
+    return modele
 
 class BertSemanticDataGenerator(tf.keras.utils.Sequence):
     """Generates batches of data.
@@ -118,7 +116,7 @@ class BertSemanticDataGenerator(tf.keras.utils.Sequence):
             max_length=max_length,
             return_attention_mask=True,
             return_token_type_ids=True,
-            pad_to_max_length=True,
+            padding=True,
             return_tensors="tf",
             truncation=True
         )
@@ -140,7 +138,6 @@ class BertSemanticDataGenerator(tf.keras.utils.Sequence):
         if self.shuffle:
             np.random.RandomState(42).shuffle(self.indexes)
 
-
 def check_similarity(sentence1, sentence2,model_question_answer):
     sentence_pairs = np.array([[str(sentence1), str(sentence2)]])
     test_data = BertSemanticDataGenerator(
@@ -153,7 +150,7 @@ def check_similarity(sentence1, sentence2,model_question_answer):
     pred = labels[idx]
     return pred, proba
 
-def question_answer(text):
+def question_answer(text,model_question_answer,fichier):
     translated = translate(text,src='fr', dest='en')
     liste_similarity=[]
     #print("translated",translated)
@@ -168,7 +165,7 @@ def question_answer(text):
                     liste_similarity.append(temp)
         else:
             return liste_similarity
-
+    print(liste_similarity)
     return liste_similarity
 
 
@@ -187,7 +184,7 @@ def translate(texte,src="en",dest="fr"):
     translate_text = translator.translate(texte,lang_tgt=dest)  
     return translate_text
 
-def generate_sentences_english_gpt2(debut_phrase,num_return_sequences,length,top_p):
+def generate_sentences_english_gpt2(debut_phrase,english_generator,num_return_sequences,length,top_p):
     debut_phrase = translate(debut_phrase,'fr',dest = 'en')
 
     response_debut_phrase = english_generator(debut_phrase,num_return_sequences=num_return_sequences,max_length=length,top_p=top_p)
@@ -207,12 +204,20 @@ def truncate(string):
 
 
 #----------Load model to finish sentences gpt-2 french fine tune----------
-french_generator = pipeline('text-generation',model='ml/modeles/gpt2-fine-tune', tokenizer='camembert-base')
+#french_generator = pipeline('text-generation',model='ml/modeles/gpt2-fine-tune', tokenizer='camembert-base')
 
 #----------Load model to finish sentences gpt2-english not fine tune----------
-english_generator = pipeline('text-generation', model='gpt2')
+def load_english_generator():
+    english_generator = pipeline('text-generation', model='gpt2')
+    return english_generator
 
 #----------Load model for questions answer----------
-model_question_answer = create_model()
-path = "ml/modeles/bert-question-reponses/weights"
-model_question_answer.load_weights(path)
+def load_bert_model():
+    model_question_answer = create_model()
+    path = "ml/modeles/bert-question-reponses/weights"
+    model_question_answer.load_weights(path)
+    return model_question_answer
+
+def load_file():
+    fichier = pd.read_csv("ml/dataset_questions_reponses.txt", sep=";")
+    return fichier
