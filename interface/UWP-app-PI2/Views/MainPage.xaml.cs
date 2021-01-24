@@ -408,10 +408,10 @@ namespace Demoo.Views
             switch (type)
             {
                 case NotifyType.StatusMessage:
-                    StatusBorder.Background = new SolidColorBrush(Windows.UI.Colors.Green);
+                    StatusBorder.Background = new SolidColorBrush(Windows.UI.Colors.Transparent);
                     break;
                 case NotifyType.ErrorMessage:
-                    StatusBorder.Background = new SolidColorBrush(Windows.UI.Colors.Red);
+                    StatusBorder.Background = new SolidColorBrush(Windows.UI.Colors.Transparent);
                     break;
             }
             StatusBlock.Text += string.IsNullOrEmpty(StatusBlock.Text) ? strMessage : "\n" + strMessage;

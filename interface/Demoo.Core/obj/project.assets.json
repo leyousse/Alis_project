@@ -141,7 +141,7 @@
   },
   "libraries": {
     "Microsoft.CognitiveServices.Speech/1.14.0": {
-      "sha512": "P7V9cKk7mlm7Mt2LCHoTD1K3l7z8v0aizY/cEjSNHaeCu9eSelC7giha3c7+lk/QlU4fydreEVPS5uA4UC4g+g==",
+      "sha512": "x9B8qVkZADAuvnyJlBg86yFd5jZYg3yhBkcHmTatHC61RjPJKbgYni8Xny926AoUZJSW97nxdh4eh3AOkeeiRg==",
       "type": "package",
       "path": "microsoft.cognitiveservices.speech/1.14.0",
       "files": [
@@ -477,7 +477,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.3": {
-      "sha512": "aTRmXwR5xYu+mWxE8r8W1DWnL02SeV8LwdQMsLwTWP8OZgrCCyTqvOAe5hRb1VNQYXjln7qr0PKpSyO/pcc19Q==",
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
       "path": "newtonsoft.json/12.0.3",
       "files": [
@@ -516,23 +516,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nicol\\.nuget\\packages\\": {},
+    "C:\\Users\\leays\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
+      "projectUniqueName": "C:\\Users\\leays\\source\\repos\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
       "projectName": "Demoo.Core",
-      "projectPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
-      "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Documents\\ESILV\\ESILV-A5\\FINAL\\Alis_project\\interface\\Demoo.Core\\obj\\",
+      "projectPath": "C:\\Users\\leays\\source\\repos\\Alis_project\\interface\\Demoo.Core\\Demoo.Core.csproj",
+      "packagesPath": "C:\\Users\\leays\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leays\\source\\repos\\Alis_project\\interface\\Demoo.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leays\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -540,12 +540,10 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://packagesource": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -557,7 +555,6 @@
     },
     "frameworks": {
       "netstandard2.0": {
-        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Microsoft.CognitiveServices.Speech": {
             "target": "Package",
@@ -575,16 +572,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

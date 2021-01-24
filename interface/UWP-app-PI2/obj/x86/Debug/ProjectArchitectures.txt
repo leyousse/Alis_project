@@ -1,1 +1,1 @@
-C:\Users\nicol\Documents\ESILV\ESILV-A5\FINAL\Alis_project\interface\UWP-app-PI2\Demoo.csproj;x86
+C:\Users\leays\source\repos\Alis_project\interface\UWP-app-PI2\Demoo.csproj;x86
