@@ -19,75 +19,75 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="88*"/>
-            <RowDefinition Height="197*"/>
-            <RowDefinition Height="215*"/>
-            <RowDefinition Height="0*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="15,5,0,10" >
-            <ComboBox x:ConnectionId='12' x:Name="VoiceComboBox"
-                                                                                             
+        <StackPanel Grid.Column="0" Margin="0,0,0,0"  >
+            <TextBlock x:ConnectionId='16' x:Name="TitleTextBlock"
+                   Text="LIS Interface"
+                   FontFamily="Calibri"
+                   FontSize="40"
+                   Foreground="DarkOrange"
+                   TextWrapping="Wrap" 
+                  />
+
+            <ComboBox x:ConnectionId='17' x:Name="VoiceComboBox"
+                                                                                       
                   ItemTemplate="{StaticResource VoiceDataTemplate}"
-                                                                         
-                  PlaceholderText="Pick a voice"
-                  BorderBrush="White"
-                  FontFamily="Cambria Math"
+                                                                   
+                  PlaceholderText="Pick a voice" 
+                  FontFamily="Calibri"
                   FontSize="16"
-                  Width="135"
+                  Width="200"
                   Height="32"
                   Margin="0,10,0,0"
-                 HorizontalAlignment="Left" VerticalAlignment="Top"
                  />
-            <Button x:ConnectionId='13' x:Name="ConvertButton"
-                FontFamily="Segoe MDL2 Assets"
-                FontSize="60"
-                Background="{x:Null}"
-                Content="&#xE725;"
-                Width="82"
-                                            Height="63" HorizontalAlignment="Left" Margin="30,2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,0.469"/>
         </StackPanel>
 
-        <StackPanel Margin="146,0,0,32" VerticalAlignment="Stretch">
-            <TextBox x:ConnectionId='11' x:Name="TextInputTextBox" 
-                                                            
-                 PlaceholderText="Enter Text"
-                 AcceptsReturn="True"
-                 Height="105"
-                 FontSize="20"
-                 Margin="0,15,148,0" HorizontalAlignment="Right" Width="1142" VerticalAlignment="Stretch"/>
-
-
-        </StackPanel>
-        <Button x:ConnectionId='4' Margin="1317,23,0,0"
-                Name="SaveButton"
-                FontFamily="Segoe MDL2 Assets"
-                FontSize="50"
-                Background="{x:Null}"
-                Content="&#xE74E;"
-                Width="74"
-                                         Height="61" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-        <StackPanel x:ConnectionId='5' x:Name="StatusPanel"  Grid.Row="1" Margin="0,10,0,75">
-            <Button x:ConnectionId='8' x:Name="ButtonSpeechtotext"
-                FontFamily="Segoe MDL2 Assets"
-                FontSize="50"
-                Background="{x:Null}"
-                Content="&#xE939;"
-                Width="96" 
+        <StackPanel Grid.Column="2" Margin="1170,0,0,0">
+            <Button x:ConnectionId='14' Name="ButtonSpeechtotext"
+                Content="SpeechToText"
+                Width="122" 
                                                                      
                 RenderTransformOrigin="0.5,0.5"
-                Height="67"
-                HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Center"
+                Height="52"
                 />
-            <Border x:ConnectionId='9' x:Name="StatusBorder" BorderBrush="Orange">
-                <TextBlock x:ConnectionId='10' x:Name="StatusBlock" FontWeight="Medium" Height="304" Margin="28,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-            </Border>
+            <Button x:ConnectionId='15' Name="ButtonEnroll"
+                Content="NewSpeaker"
+                Padding="15"
+                                         RenderTransformOrigin="0.5,0.5"
+                Width="122" Height="52"
+                Margin="0,10,0,0"
+               />
+            
+        </StackPanel>
+        <Button x:ConnectionId='4' Margin="1300,30,0,0"
+                Name="SaveButton"
+                Content="Save as .wav"
+                Width="100"
+                                         Height="32"/>
 
+
+        <StackPanel Grid.Row ="2"  Margin="0,0">
+            <TextBox x:ConnectionId='12' x:Name="TextInputTextBox" 
+                                                      
+                 PlaceholderText="Enter Text"
+                 AcceptsReturn="True"
+                 Width="1000"
+                 Height="100"
+                 Margin="0,0,0,0"/>
+            
+            <Button x:ConnectionId='13' Name="ConvertButton"
+                Content="Convert"
+                Width="100"
+                                            Height="32"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Margin="0,10,0,10" HorizontalAlignment="Stretch">
+        <StackPanel Grid.Row="1" Margin="0,0,0,0">
             <Grid Margin="0,40">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -96,14 +96,14 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
-                <ListView x:ConnectionId='6'                                    IsItemClickEnabled="True" SelectionMode="Single"
+           
+            <ListView x:ConnectionId='10'                                    IsItemClickEnabled="True" SelectionMode="Single"
                                                                       
                       Width="700"
                       Grid.Column="0"
                       />
 
-                <ListView x:ConnectionId='7'                                          IsItemClickEnabled="True" SelectionMode="Single"
+            <ListView x:ConnectionId='11'                                          IsItemClickEnabled="True" SelectionMode="Single"
                                                                         
                   Width="600"
                   Grid.Column="1"
@@ -111,7 +111,37 @@
             </Grid>
         </StackPanel>
 
+
+
+        <MediaPlayerElement x:ConnectionId='5' x:Name="mPlayerElement"
+                            Height="100"
+                            AutoPlay="True"
+                            AreTransportControlsEnabled="True"
+                            Grid.Row="3" >
+            <MediaPlayerElement.TransportControls>
+                <MediaTransportControls IsStopButtonVisible="True"
+                                        IsStopEnabled="True"
+                                        IsSeekBarVisible="False"
+                                        IsSeekEnabled="False"
+                                        IsFullWindowButtonVisible="False"
+                                        IsZoomButtonVisible="False"/>
+            </MediaPlayerElement.TransportControls>
+        </MediaPlayerElement>
+
+
+
+        <StackPanel x:ConnectionId='6' x:Name="StatusPanel"  Grid.Row="3" Grid.Column="1" Margin="0,-50">
+            <Border x:ConnectionId='7' x:Name="StatusBorder" >
+                <ScrollViewer VerticalScrollMode="Auto"  VerticalScrollBarVisibility="Auto" MaxHeight="200">
+                    <!-- Use LiveSetting to enable screen readers to announce the status update. -->
+                    <TextBlock x:ConnectionId='9' x:Name="StatusBlock" FontWeight="Bold" AutomationProperties.LiveSetting="Assertive"
+                        MaxWidth="{Binding ElementName=Splitter, Path=ActualWidth}"  TextWrapping="Wrap"  />
+                </ScrollViewer>
+            </Border>
+            <TextBlock x:ConnectionId='8' x:Name="StatusLabel"  TextWrapping="Wrap" Text="Status:" FontSize="20"/>
+        </StackPanel>
+        
+
     </Grid>
 </Page>
-    
 

@@ -35,6 +35,9 @@ using System.Collections.ObjectModel;
 using Windows.UI.Core;
 using System.Text.RegularExpressions;
 
+//using System.Speech.Synthesis;
+//using SpeechSynthesizer = Microsoft.CognitiveServices.Speech.SpeechSynthesizer;
+
 namespace Demoo.Views
 {
 
@@ -44,7 +47,7 @@ namespace Demoo.Views
 
         public VoiceInformation SelectedVoice { get; set; }
         public string TextInput { get; set; }
-        private Stream stream = null;
+        
 
         private ObservableCollection<String> finDePhrase = new ObservableCollection<String>();
         public ObservableCollection<String> FinDePhrase { get { return this.finDePhrase; } }
@@ -56,20 +59,19 @@ namespace Demoo.Views
         string url_insert_to_databases = "http://127.0.0.1:5000/insert_to_dabatase";
         string url_fin_phrases = "http://127.0.0.1:5000/generate_sentences_english_gpt2";
 
+        string CONFIG_LOCATIOn = "francecentral";
+        string CONFIG_KEY = "1c514fb1fea2465a882f0fae12242cc0";
+        string CONFIG_LAN = "fr-FR";
 
+        bool CurrentlyAddingToListView = false;
+
+        private Stream stream = null;
         public MainPage()
         {
             this.InitializeComponent();
         }
 
 
-
-        public class Question
-        {
-            public string id { get; set; }
-            public string texte { get; set; }
-
-        }
         
 
         /// <summary>
@@ -80,9 +82,8 @@ namespace Demoo.Views
         /// <returns></returns>
         private async Task<String> TryPostJsonAsync(string id, string phrase, string url)
         {
-            string uirWebAPI, exceptionMessage;
-            exceptionMessage = string.Empty;
-            string webResponse = string.Empty;
+            string  exceptionMessage= string.Empty;
+            string webResponse =  " ";
             try
             {
                 Uri uri = new Uri(url);
@@ -91,11 +92,10 @@ namespace Demoo.Views
                 httpWebRequest.Method = "POST";
                 using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream(), Encoding.UTF8))
                 {
-                    // Build employee test JSON objec
-                    dynamic employee = new JObject();
-                    employee.id = id;
-                    employee.phrase = phrase;
-                    streamWriter.Write(employee.ToString());
+                    dynamic jsonReponse = new JObject();
+                    jsonReponse.id = id;
+                    jsonReponse.phrase = phrase;
+                    streamWriter.Write(jsonReponse.ToString());
                 }
                 HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream(), Encoding.UTF8))
@@ -107,14 +107,22 @@ namespace Demoo.Views
             catch (Exception ex)
             {
                 exceptionMessage = $"An error occurred. {ex.Message}";
+                //MessageDialog dlg = new MessageDialog(exceptionMessage);
+                //await dlg.ShowAsync();
+                //return webResponse;
             }
 
             return webResponse;
            
         }
-
+        /// <summary>
+        /// Permet de sauvegarder le contenu sous forme de fichier audio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            string exceptionMessage = string.Empty;
             try
             {
                 if (stream != null)
@@ -137,19 +145,25 @@ namespace Demoo.Views
             }
             catch (Exception exception)
             {
-                var dlg = new MessageDialog(exception.Message, Package.Current.DisplayName);
-                var cmd = await dlg.ShowAsync();
+                exceptionMessage = $"An error occurred. {exception.Message}";
+                MessageDialog dlg = new MessageDialog(exceptionMessage);
+                await dlg.ShowAsync();
             }
         }
-
+        /// <summary>
+        /// Quand l'utilisateur click sur un element de la liste des propositions de réponses, le oontenu va être dit à voix haute
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
+            string exceptionMessage = string.Empty;
             try
             {
                 DeleteFinDePhrase();
                 GetTextCallApi(TextInput, url_fin_phrases, 0);
 
-                using (var synthesizer = new Windows.Media.SpeechSynthesis.SpeechSynthesizer())
+                /*using (var synthesizer = new Windows.Media.SpeechSynthesis.SpeechSynthesizer())
                 {
                     synthesizer.Voice = SelectedVoice ?? Windows.Media.SpeechSynthesis.SpeechSynthesizer.DefaultVoice;
 
@@ -158,40 +172,36 @@ namespace Demoo.Views
 
                     stream = synStream.AsStream();
                     stream.Position = 0;
-
-                    //var dlg = new MessageDialog("Conversion succeeded.", Package.Current.DisplayName);
-                    //var cmd = await dlg.ShowAsync();
-                }
+                }*/
             }
             catch (Exception exception)
             {
-                var dlg = new MessageDialog(exception.Message, Package.Current.DisplayName);
-                var cmd = await dlg.ShowAsync();
+                exceptionMessage = $"An error occurred. {exception.Message}";
+                MessageDialog dlg = new MessageDialog(exceptionMessage);
+                await dlg.ShowAsync();
             }
         }
-
+        /// <summary>
+        /// Quand l'utilisateur click sur le boutton speech to text, on récupère ce qui est dit à l'oral et on l'envoie à l'api
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void SpeechRecognitionFromMicrophone_ButtonClicked(object sender, RoutedEventArgs e)
         {
             // Creates an instance of a speech config with specified subscription key and service region.
             // Replace with your own subscription key and service region (e.g., "westus").
-            var config = SpeechConfig.FromSubscription("1c514fb1fea2465a882f0fae12242cc0", "francecentral");
-            config.SpeechRecognitionLanguage = "fr-FR";
+            var config = SpeechConfig.FromSubscription(CONFIG_KEY, CONFIG_LOCATIOn);
+            config.SpeechRecognitionLanguage = CONFIG_LAN;
 
             try
             {
-                //ON SUPPRIME LES ELEMENTS DE LA LISTE SI Y EN A
-                DeleteQuestionsReponses();
+                
 
 
                 // Creates a speech recognizer using microphone as audio input.
                 using (var recognizer = new SpeechRecognizer(config))
                 {
-                    // Starts speech recognition, and returns after a single utterance is recognized. The end of a
-                    // single utterance is determined by listening for silence at the end or until a maximum of 15
-                    // seconds of audio is processed.  The task returns the recognition text as result.
-                    // Note: Since RecognizeOnceAsync() returns only a single utterance, it is suitable only for single
-                    // shot recognition like command or query.
-                    // For long-running multi-utterance recognition, use StartContinuousRecognitionAsync() instead.
+
                     var result = await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
 
                     // Checks result.
@@ -222,31 +232,14 @@ namespace Demoo.Views
 
                     //Création de l'objet à séréaliser
                     string texte = sb.ToString();
-                    Question question = new Question()
-                    {
-                        id = "1234",
-                        texte = sb.ToString(),
-                    };
-                    //Séréalisation de l'objet
-                    string notjsonyet = "'id':'123','debut_phrase':'" + texte+"'";
-                    string jsonSerializedObj = JsonConvert.SerializeObject(question);
 
-                    //Choix du local folder comme emplacement
-                    //C:\Users\pauwe\AppData\Local\Packages\b6d47962-7028-4697-b1c3-c39fb3a25c97_npata57gt8602\LocalState\
-                    //C:\Users\leays\AppData\Local\Packages\243E158E-1F25-44EF-90FC-68A410B06C6D_kqh4kznn2n4py\LocalState\
-                    Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
-                    //Création du fichier json contenant l'id de l'interlocuteur et son texte
-                    Windows.Storage.StorageFile sampleFile = await localFolder.CreateFileAsync("dataFile.json",
-                     Windows.Storage.CreationCollisionOption.ReplaceExisting);
+                    //ON SUPPRIME LES ELEMENTS DE LA LISTE SI Y EN A
+                    DeleteQuestionsReponses();
 
-                    //Ecriture dans le fichier json
-                    await Windows.Storage.FileIO.WriteTextAsync(sampleFile, jsonSerializedObj);
                     //Envoi de la requête
-
                     //cal api
                     GetTextCallApi(texte, url_questions_reponses, 1);
-
                 }
             }
             catch (Exception ex)
@@ -254,6 +247,12 @@ namespace Demoo.Views
                 NotifyUser($"Enable Microphone First.\n {ex.ToString()}", NotifyType.ErrorMessage);
             }
         }
+        /// <summary>
+        /// Permet de faire l'appel à la fonction TryPostJsonAsync qui fait envoie le texte à l'api. Avec le texct recupéré, on appelle les fonctions qui permettent de l'ajouter à l'interface.
+        /// </summary>
+        /// <param name="texte">Texte qui est envoyé à l'api sur lequel on va faire la précition</param>
+        /// <param name="url">url de l'api en question</param>
+        /// <param name="choice">entier, 0 ou 1 en fonction de si on veut prédire une fin de phrase ouune réponse à une question</param>
         private async void GetTextCallApi(string texte,string url,int choice)
         {
             Task<string> reponse = TryPostJsonAsync("id1", texte,url);
@@ -267,29 +266,39 @@ namespace Demoo.Views
                 AddPredictionToQuestionsReponses(reponse_string);
             }
         }
-
+        /// <summary>
+        /// On recupère les réponses, on utilise du regex pour cleanles phrases et ensuite on le rajoute à notre listView
+        /// </summary>
+        /// <param name="reponse_string"></param>
         private async void AddPredictionToFinDePhrase(string reponse_string)
         {
             String split = "\",";
 
             string[] listeReponseModele = reponse_string.Split(split);
-
+            CurrentlyAddingToListView = true;
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
                 foreach (String phrase in listeReponseModele)
                 {
+                    
                     string temp = Regex.Replace(phrase, @"\|]|/|\n|\[|\r|]", "");
                     string temp2 = Regex.Replace(temp, "\"", "");
                     this.FinDePhrase.Add(temp2);
+                    
                 }
 
             });
+            CurrentlyAddingToListView = false;
         }
+        /// <summary>
+        /// On recupère les réponses, on utilise du regex pour cleanles phrases et ensuite on le rajoute à notre listView
+        /// </summary>
+        /// <param name="reponse_string"></param>
         private async void AddPredictionToQuestionsReponses(string reponse_string)
         {
             String split = "\",";
 
             string[] listeReponseModele = reponse_string.Split(split);
-
+            CurrentlyAddingToListView = true;
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
                 foreach (String phrase in listeReponseModele)
                 {
@@ -299,12 +308,14 @@ namespace Demoo.Views
                 }
 
             });
+            CurrentlyAddingToListView = false;
         }
         /// <summary>
-        /// Delete the observableCollection because we have a new prediction
+        /// On supprime les anciennes prédictions pour pouvoir montrer les nouvelles
         /// </summary>
         private async void DeleteFinDePhrase()
         {
+            CurrentlyAddingToListView = true;
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
                 foreach (var x in FinDePhrase.ToList())
                 {
@@ -312,9 +323,14 @@ namespace Demoo.Views
                 }
 
             });
+            CurrentlyAddingToListView = false;
         }
+        /// <summary>
+        /// On supprime les anciennes prédictions pour pouvoir montrer les nouvelles
+        /// </summary>
         private async void DeleteQuestionsReponses()
         {
+            CurrentlyAddingToListView = true;
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
                 foreach (var x in QuestionsReponses.ToList())
                 {
@@ -322,15 +338,103 @@ namespace Demoo.Views
                 }
 
             });
+            CurrentlyAddingToListView = false;
+        }
+        /// <summary>
+        /// Cette méthode est appellée quand on click sur la liste view, elle recupère l'élement selectionné et appelle ensuite la méthode SynthesizeAudioAsync.
+        /// Le "if" sert à ne pas clacker sur l'item quand on supprime la liste et qu'on met de nouvelles prédictions. Si on ne le fait pas on a une erreur car il essaie de sélectionner l'élemet clické
+        /// alors que la liste est null
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void FinDePhrases_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(CurrentlyAddingToListView == false)
+            {
+                string val = (sender as ListView).SelectedItem.ToString();
+
+                await SynthesizeAudioAsync(val);
+            }
+        }
+        /// <summary>
+        /// Cette méthode est appellée quand on click sur la liste view, elle recupère l'élement selectionné et appelle ensuite la méthode SynthesizeAudioAsync.
+        /// Le "if" sert à ne pas clacker sur l'item quand on supprime la liste et qu'on met de nouvelles prédictions. Si on ne le fait pas on a une erreur car il essaie de sélectionner l'élemet clické
+        /// alors que la liste est null        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void QuestionsReponses_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CurrentlyAddingToListView == false)
+            {
+                string val = (sender as ListView).SelectedItem.ToString();
+
+                await SynthesizeAudioAsync(val);
+            }
         }
 
+
+
+        private async Task SynthesizeAudioAsync(string input)
+        {
+
+            /* string subscriptionKey = "c06aeb4d93b24003a125aa2adef59aaa";
+             string region = "francecentral";
+             var config = SpeechConfig.FromSubscription(subscriptionKey, region);
+             using (var synthesizer = new SpeechSynthesizer(config))
+             {
+                 await synthesizer.SpeakTextAsync("Synthesizing directly to speaker output.");
+             }*/
+            /* try
+             {
+                 using (var synthesizer = new Windows.Media.SpeechSynthesis.SpeechSynthesizer())
+                 {
+
+                     //synthesizer.Voice = SelectedVoice ?? SpeechSynthesizer.DefaultVoice;
+
+                     var synStream = await synthesizer.SynthesizeTextToStreamAsync(test);
+
+                     //mPlayerElement.Source = MediaSource.CreateFromStream(synStream, synStream.ContentType);
+
+                     stream = synStream.AsStream();
+                     stream.Position = 0;
+
+                     var dlg = new MessageDialog("Conversion succeeded.", Package.Current.DisplayName);
+                     var cmd = await dlg.ShowAsync();
+                 }
+             }
+             catch (Exception exception)
+             {
+                 var dlg = new MessageDialog(exception.Message, Package.Current.DisplayName);
+                 var cmd = await dlg.ShowAsync();
+             }*/
+            try
+            {
+                using (var synthesizer = new Windows.Media.SpeechSynthesis.SpeechSynthesizer())
+                {
+                    synthesizer.Voice = SelectedVoice ?? Windows.Media.SpeechSynthesis.SpeechSynthesizer.DefaultVoice;
+
+                    var synStream = await synthesizer.SynthesizeTextToStreamAsync(input);
+
+
+                    mPlayerElement.Source = MediaSource.CreateFromStream(synStream, synStream.ContentType);
+
+                    stream = synStream.AsStream();
+                    stream.Position = 0;
+
+                }
+            }
+            catch (Exception exception)
+            {
+                var dlg = new MessageDialog(exception.Message, Package.Current.DisplayName);
+                var cmd = await dlg.ShowAsync();
+            }
+        }
 
         private enum NotifyType
         {
             StatusMessage,
             ErrorMessage
         };
-
         public static async Task SpeakerVerify(SpeechConfig config, VoiceProfile profile, Dictionary<string, string> profileMapping)
         {
             var speakerRecognizer = new SpeakerRecognizer(config, AudioConfig.FromDefaultMicrophoneInput());
@@ -340,7 +444,6 @@ namespace Demoo.Views
             var result = await speakerRecognizer.RecognizeOnceAsync(model);
             Console.WriteLine($"Verified voice profile for speaker {profileMapping[result.ProfileId]}, score is {result.Score}");
         }
-
         private async Task VerificationEnroll(SpeechConfig config, Dictionary<string, string> profileMapping)
         {
 
@@ -374,7 +477,6 @@ namespace Demoo.Views
                 }
             }
         }
-
         private async void VoiceRecognition(object sender, RoutedEventArgs e)
         {
 
@@ -388,7 +490,6 @@ namespace Demoo.Views
 
             Console.ReadLine();
         }
-
         private void NotifyUser(string strMessage, NotifyType type)
         {
             // If called from the UI thread, then update immediately.
@@ -402,7 +503,6 @@ namespace Demoo.Views
                 var task = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => UpdateStatus(strMessage, type));
             }
         }
-
         private void UpdateStatus(string strMessage, NotifyType type)
         {
             switch (type)
@@ -436,24 +536,6 @@ namespace Demoo.Views
             }
         }
 
-        private void FinDePhrases_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-         
-            MessageDialog dlg = new MessageDialog(sender.ToString());
-            dlg.ShowAsync();
-        }
-        private void QuestionsReponses_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-            MessageDialog dlg = new MessageDialog(sender.ToString());
-            dlg.ShowAsync();
-        }
-
-        private void TitleTextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-
-        }
     }
 
 }

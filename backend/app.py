@@ -3,10 +3,15 @@ import json
 from bdd import insert_phrase
 #import sys
 #sys.path.insert(1, '/ml')
-from models import generate_sentences_english_gpt2,generate_sentences_french_gpt2,question_answer
+from models import generate_sentences_english_gpt2,generate_sentences_french_gpt2,question_answer,load_english_generator,load_bert_model,load_file
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+
+#----------Load model for questions answer----------
+model_questions_reponses=load_bert_model()
+fichier = load_file()
+#english_generator = load_english_generator()
 
 ##liste = generate_sentences_english_gpt2('bonjour',num_return_sequences=2)
 @app.route('/generate_sentences_english_gpt2',methods=['POST'])
@@ -16,7 +21,7 @@ def finish_sentences_english_gpt2():
     debut_phrase = req_data["phrase"]
     print("debut_phrase",debut_phrase,type(debut_phrase))
     
-    liste_reponses = generate_sentences_english_gpt2(debut_phrase,num_return_sequences=4,length=40,top_p = 0.4)
+    liste_reponses = generate_sentences_english_gpt2(debut_phrase,english_generator,num_return_sequences=4,length=40,top_p = 0.4)
     
     #liste_reponse =  generate_sentences_english_gpt2(debut_phrase,num_return_sequences=3)
     json_string = json.dumps(liste_reponses,ensure_ascii=False)
@@ -60,13 +65,12 @@ def question_reponses():
     
     question = req_data["phrase"]
     print("QUESTIONN",question,type(question))
-    liste_reponse = question_answer(question)
+    liste_reponse = question_answer(question,model_questions_reponses,fichier)
+    #liste_reponse = ["reponse 1", "reponse 2", "reponse 3"]
     print(liste_reponse)
-    
+
     #liste_reponse = ["reponse1","reponse2"]
     json_string = json.dumps(liste_reponse,ensure_ascii=False)
     print(json_string)
     return json_string
-
-
 app.run()
